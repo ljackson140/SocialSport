@@ -1,7 +1,8 @@
 ﻿namespace Social.Sport.Infrastructure
 {
-    public class Dependencies
+    public static class Dependencies
     {
+        //public static 
 
     }
 }
