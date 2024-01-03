@@ -2,9 +2,19 @@
 {
     public class ConstantConfig
     {
-        public class placeHoldermessages // template for future 
+        public class APIConfig 
         {
-            public const string holdstring = "string"; 
+            public const string UseInMemoryDatabaseKey = "UseInMemoryDatabase";
+            public const string ConnectionStringKey = "ConnectionStrings:DBConnection";
+            public const string InMemoryDatabase = "SocialSport";
+        }
+
+        public class AuthenticateTokenMessages
+        {
+            public const string SecretKey = "Authentication:SecretForKey";
+            public const string Issuer = "Authentication:Issuer";
+            public const string Audience = "Authentication:Audience";
+            public const string HoldKey = "Bearer";
         }
     }
 }
