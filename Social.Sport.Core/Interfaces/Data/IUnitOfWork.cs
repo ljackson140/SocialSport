@@ -1,4 +1,4 @@
-﻿namespace Social.Sport.Core.Interfaces
+﻿namespace Social.Sport.Core.Interfaces.Data
 {
     public interface IUnitOfWork
     {

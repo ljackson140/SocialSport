@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Social.Sport.Core.Entities;
-using Social.Sport.Core.Interfaces;
+using Social.Sport.Core.Interfaces.Data;
 
 namespace Social.Sport.Infrastructure.Data
 {

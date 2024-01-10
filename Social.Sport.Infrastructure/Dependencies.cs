@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using Social.Sport.Core.Interfaces;
+using Social.Sport.Core.Interfaces.Data;
 using Social.Sport.Infrastructure.Data;
 using System.Text;
 using static Social.Sport.Core.Constants.ConstantConfig;
@@ -26,6 +26,7 @@ namespace Social.Sport.Infrastructure
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<ILogService, LogService>
             return services;
         }
 
