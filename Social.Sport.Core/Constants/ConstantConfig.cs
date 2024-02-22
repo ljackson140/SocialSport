@@ -16,5 +16,10 @@
             public const string Audience = "Authentication:Audience";
             public const string HoldKey = "Bearer";
         }
+
+        public class ValidationMessages
+        {
+            public const string Messagevalid = "Input valid";
+        }
     }
 }

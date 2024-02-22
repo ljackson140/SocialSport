@@ -14,5 +14,7 @@
         public string phoneNumber { get; set; }
         public int? TeamId { get; set; } 
         public UserStatus? isActive { get; set; }
+
+        public ICollection<Team> Teams { get; set; }
     }
 }
