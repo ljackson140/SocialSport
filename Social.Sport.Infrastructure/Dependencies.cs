@@ -8,6 +8,7 @@ using Social.Sport.Core.Interfaces.Data;
 using Social.Sport.Core.Interfaces.Services;
 using Social.Sport.Core.Services;
 using Social.Sport.Infrastructure.Data;
+using System.Configuration;
 using System.Text;
 using static Social.Sport.Core.Constants.ConstantConfig;
 
@@ -20,13 +21,13 @@ namespace Social.Sport.Infrastructure
             var useInMemoryDatabase = bool.Parse(configuration[APIConfig.UseInMemoryDatabaseKey]);
             if (useInMemoryDatabase)
             {
-                services.AddDbContext<AppDbContext>(x => x.UseInMemoryDatabase(APIConfig.UseInMemoryDatabaseKey));
+                services.AddDbContext<AppDbContext>(x => x.UseInMemoryDatabase(APIConfig.InMemoryDatabase));
             }
             else
             {
-                services.AddDbContext<AppDbContext>(x => x.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+                services.AddDbContext<AppDbContext>(c => c.UseSqlServer(configuration[APIConfig.ConnectionStringKey]));
             };
-
+            
             //services.AddScoped(typeof(IAuthenticateTokenService), typeof(AuthenticateTokenService));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));

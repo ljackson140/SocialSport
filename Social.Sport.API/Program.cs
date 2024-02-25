@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Social.Sport.API.APIConfig;
 using Social.Sport.API.Middlewares;
 using Social.Sport.Infrastructure;
+using Social.Sport.Infrastructure.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);

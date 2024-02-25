@@ -7,12 +7,12 @@ namespace Social.Sport.Infrastructure.Data
     {
         private AppDbContext Context { get; set; }
 
-        public IRepository<User> User
+        public IRepository<User> Users
         {
             get => new Repository<User>(Context);
         }
 
-        public IRepository<Team> Team
+        public IRepository<Team> Teams
         {
             get => new Repository<Team>(Context);
         }

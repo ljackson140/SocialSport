@@ -6,7 +6,7 @@
         {
             public const string UseInMemoryDatabaseKey = "UseInMemoryDatabase";
             public const string ConnectionStringKey = "ConnectionStrings:DBConnection";
-            public const string InMemoryDatabase = "SocialSport";
+            public const string InMemoryDatabase = "SocialSportDB";
         }
 
         public class AuthenticateTokenMessages
