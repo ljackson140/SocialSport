@@ -20,23 +20,20 @@ namespace Social.Sport.Infrastructure
             var useInMemoryDatabase = bool.Parse(configuration[APIConfig.UseInMemoryDatabaseKey]);
             if (useInMemoryDatabase)
             {
-                services.AddDbContext<AppDbContext>(x => x.UseInMemoryDatabase(APIConfig.InMemoryDatabase));
+                services.AddDbContext<AppDbContext>(x => x.UseInMemoryDatabase(APIConfig.UseInMemoryDatabaseKey));
             }
             else
             {
-                services.AddDbContext<AppDbContext>(x => x.UseSqlServer(APIConfig.ConnectionStringKey));
+                services.AddDbContext<AppDbContext>(x => x.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             };
 
-            services.AddSingleton(configuration);
-
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            //services.AddScoped(typeof(IAuthenticateTokenService), typeof(AuthenticateTokenService));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<ILogService, LogService>(
                     serviceProvider => new LogService(
                         options: serviceProvider.GetRequiredService<IOptions<TelemetryConfiguration>>())
                 );
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             return services;
         }
 

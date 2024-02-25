@@ -7,7 +7,7 @@
 
     public abstract class Result<T> : Result
     {
-        private T Data { get; set; }
+        public T Data { get; set; }
 
         protected Result(T data)
         {
