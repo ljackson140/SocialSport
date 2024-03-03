@@ -15,6 +15,10 @@
             public const string Issuer = "Authentication:Issuer";
             public const string Audience = "Authentication:Audience";
             public const string HoldKey = "Bearer";
+            public const string userId = "sub";
+            public const string userName = "given_name";
+            public const string userFamilyName = "family_name";
+            public const string userCity = "city";
         }
 
         public class ValidationMessages

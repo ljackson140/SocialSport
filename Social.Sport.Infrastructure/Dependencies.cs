@@ -21,7 +21,7 @@ namespace Social.Sport.Infrastructure
 
             services.AddDbContext<AppDbContext>(c => c.UseSqlServer(configuration[APIConfig.ConnectionStringKey]));
 
-            //services.AddScoped(typeof(IAuthenticateTokenService), typeof(AuthenticateTokenService));
+            services.AddScoped(typeof(IAuthenticateTokenService), typeof(AuthenticateTokenService));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<ILogService, LogService>(
