@@ -27,8 +27,7 @@ namespace Social.Sport.Infrastructure.Configurations
             builder.Property(x => x.isActive).HasConversion<string>();
 
             builder.HasMany(x => x.Teams)
-                .WithMany(x => x.Users)
-                .UsingEntity<Team>();
+                .WithMany(x => x.Users);
 
             base.Configure(builder);
         }

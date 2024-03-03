@@ -15,8 +15,7 @@ namespace Social.Sport.Infrastructure.Configurations
             builder.Property(x => x.TeamMax).HasMaxLength(100);
 
             builder.HasMany(x => x.Users)
-               .WithMany(x => x.Teams)
-               .UsingEntity<User>();
+               .WithMany(x => x.Teams);
 
             base.Configure(builder);
         }

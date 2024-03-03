@@ -17,19 +17,9 @@ namespace Social.Sport.Infrastructure
     public static class Dependencies
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
-        {
-            /*var useInMemoryDatabase = bool.Parse(configuration[APIConfig.UseInMemoryDatabaseKey]);
-            if (useInMemoryDatabase)
-            {
-                services.AddDbContext<AppDbContext>(x => x.UseInMemoryDatabase(APIConfig.InMemoryDatabase));
-            }
-            else
-            {
-                services.AddDbContext<AppDbContext>(c => c.UseSqlServer(configuration[APIConfig.ConnectionStringKey]));
-            };*/
+        {           
 
             services.AddDbContext<AppDbContext>(c => c.UseSqlServer(configuration[APIConfig.ConnectionStringKey]));
-
 
             //services.AddScoped(typeof(IAuthenticateTokenService), typeof(AuthenticateTokenService));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
