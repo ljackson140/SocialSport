@@ -20,7 +20,7 @@ namespace Social.Sport.Core.Services
         public AuthenticateTokenService(IConfiguration configuration, IUnitOfWork unitOfWork, ILogger<BaseService> logger) : base(unitOfWork, logger) 
         {
             _configuration = configuration ?? throw new ArgumentNullException();
-        }
+        }                                                
 
         public async Task<Result<UserAuthenticationTicket>> AuthenticateAsync(string email, string password, CancellationToken cancellationToken)
         {
