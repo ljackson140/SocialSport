@@ -24,6 +24,8 @@
         public class ValidationMessages
         {
             public const string Messagevalid = "Input valid";
+            public const string MessageAccountExist = "AccountExist";
+            public const string MessageInvalid = "Input invalid";
         }
     }
 }
