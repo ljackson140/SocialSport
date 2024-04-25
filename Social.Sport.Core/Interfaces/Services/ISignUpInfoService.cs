@@ -5,7 +5,7 @@ using Social.Sport.Core.Entities;
 
 namespace Social.Sport.Core.Interfaces.Services
 {
-    public interface ISignupInfo
+    public interface ISignUpInfoService
     {
         Task<Result<User>> SignUpAsync(User user, CancellationToken cancellationToken);
         Task<Result<User>> UnitUserAsync(int userId, CancellationToken cancellationToken);

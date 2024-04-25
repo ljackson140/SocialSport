@@ -5,7 +5,7 @@ using Social.Sport.Core.Constants;
 
 namespace Social.Sport.API.Middlewares
 {
-    public class ValidationFilterAttributes : IActionFilter
+    public class ValidationFilterAttribute : IActionFilter
     {
         public void OnActionExecuted(ActionExecutedContext context)
         {

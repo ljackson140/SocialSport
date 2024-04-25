@@ -8,7 +8,7 @@ using static Social.Sport.Core.Constants.ConstantConfig;
 
 namespace Social.Sport.Core.Services
 {
-    public class SignUpInfoService : BaseService, ISignupInfo
+    public class SignUpInfoService : BaseService, ISignUpInfoService
     {
         public SignUpInfoService(IUnitOfWork unitOfWork, ILogger<BaseService> logger) : base(unitOfWork, logger)
         {
