@@ -19,6 +19,16 @@ namespace Social.Sport.Core.Services
             throw new NotImplementedException();
         }
 
+        public Task<Result<Team>> DeleteAsync(Team TeamId, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Result<IList<Team>>> GetAllAsync(Team Team, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<Result<Team>> UpdateAsync(Team Team, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
